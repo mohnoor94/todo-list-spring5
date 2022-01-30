@@ -4,6 +4,7 @@
     <title>Hello from JSP</title>
 </head>
 <body>
-<h1>Hello from JSP</h1>
+<h1>Hello from JSP, ${user}</h1>
+<h2>${welcomeMessage}</h2>
 </body>
 </html>
