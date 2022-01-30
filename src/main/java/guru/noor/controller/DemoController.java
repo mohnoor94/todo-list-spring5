@@ -25,7 +25,7 @@ public class DemoController {
     }
 
     @GetMapping("welcome")
-    // http://localhost:8080/todo-list-spring5/welcome?user=Noor
+    // http://localhost:8080/todo-list-spring5/welcome?user=Noor&age=28
     public String welcome(@RequestParam String user, @RequestParam int age, Model model) {
 //        model.addAttribute("user", "Noor");
         model.addAttribute("helloMessage", demoService.getHelloMessage(user));
