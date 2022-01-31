@@ -17,6 +17,7 @@
         <tr>
             <th>Title</th>
             <th>Deadline</th>
+            <th>Edit</th>
             <th>Delete</th>
         </tr>
 
@@ -26,11 +27,16 @@
                 <c:param name="id" value="${item.id}"/>
             </c:url>
 
+            <c:url var="editUrl" value="${Mappings.ADD_ITEM}">
+                <c:param name="id" value="${item.id}"/>
+            </c:url>
+
             <tr>
                 <td><c:out value="${item.title}"/></td>
                 <td><c:out value="${item.deadline}"/></td>
+                <td><a href="${editUrl}">Edit</a></td>
                 <td><a href="${deleteUrl}">Delete</a></td>
-            <tr/>
+            </tr>
         </c:forEach>
     </table>
 </div>
